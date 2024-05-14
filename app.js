@@ -101,3 +101,24 @@ function ageUp(obj) {
 
 console.log(ageUp(myObj));
 console.log(ageUp(myObj));
+
+//Take an object, make a copy, and increment its age field
+function ageUpCopy(obj) {
+  let copyObj = { ...obj };
+  delete copyObj.updated_at;
+  if (Object.hasOwn(copyObj, "age")) {
+    copyObj.age++;
+  } else {
+    copyObj.age = 0;
+  }
+  if (Object.hasOwn(obj, "updated_at")) {
+    copyObj.updated_at = new Date();
+  } else {
+    copyObj.updated_at = new Date();
+  }
+
+  return copyObj;
+}
+
+console.log(ageUpCopy(myObj));
+console.log(ageUpCopy(myObj));
