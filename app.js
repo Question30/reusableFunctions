@@ -74,4 +74,9 @@ arr.sort((a, b) => a.age - b.age);
 
 //Filter the array to remove entries with an age greater than 50
 const filteredArr = arr.filter((obj) => obj.age < 50);
-console.log(filteredArr);
+// console.log(filteredArr);
+
+//use the reduce method to calculate the sum of the ages, Then use the result to calculate the average age
+const avgOfArr =
+  arr.reduce((sum, value) => sum + parseInt(value.age), 0) / arr.length;
+console.log(avgOfArr);
