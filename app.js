@@ -80,3 +80,24 @@ const filteredArr = arr.filter((obj) => obj.age < 50);
 const avgOfArr =
   arr.reduce((sum, value) => sum + parseInt(value.age), 0) / arr.length;
 console.log(avgOfArr);
+
+//Part 3
+let myObj = {};
+//Take an Object and increment its age field
+function ageUp(obj) {
+  if (Object.hasOwn(obj, "age")) {
+    obj.age++;
+  } else {
+    obj.age = 0;
+  }
+  if (Object.hasOwn(obj, "updated_at")) {
+    obj.updated_at = new Date();
+  } else {
+    obj.updated_at = new Date();
+  }
+
+  return obj;
+}
+
+console.log(ageUp(myObj));
+console.log(ageUp(myObj));
