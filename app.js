@@ -70,4 +70,8 @@ let arr = [
 //Sort the array by age
 arr.sort((a, b) => a.age - b.age);
 
-console.log(arr);
+// console.log(arr);
+
+//Filter the array to remove entries with an age greater than 50
+const filteredArr = arr.filter((obj) => obj.age < 50);
+console.log(filteredArr);
