@@ -10,4 +10,11 @@ function sumOfArray(array) {
   return sum;
 }
 
-console.log(sumOfArray([1, 2, 3, 4, 5, 6]));
+//console.log(sumOfArray([1, 2, 3, 4, 5, 6]));
+
+//Take an array of numbers and return the average;
+function avgOfArray(array) {
+  return sumOfArray(array) / array.length;
+}
+
+console.log(avgOfArray([1, 2, 3, 4, 5, 6]));
