@@ -17,4 +17,18 @@ function avgOfArray(array) {
   return sumOfArray(array) / array.length;
 }
 
-console.log(avgOfArray([1, 2, 3, 4, 5, 6]));
+// console.log(avgOfArray([1, 2, 3, 4, 5, 6]));
+
+//Take an array and return the longest string
+
+function longestString(array) {
+  let longest = array[0];
+
+  for (let i = 1; i < array.length; i++) {
+    if (array[i].length > longest.length) {
+      longest = array[i];
+    }
+  }
+  return longest;
+}
+console.log(longestString(["say", "hello", "in", "the", "morning"]));
